@@ -354,6 +354,18 @@ function Home() {
                     <h3 className={`text-3xl md:text-4xl font-bold mb-6 ${activeFeature === index ? 'text-gray-900' : 'text-gray-400'}`}>
                       {feature.title}
                     </h3>
+
+                    {/* Mobile Image (Inline) - Visible only on small screens */}
+                    <div className="md:hidden mb-6 w-full relative">
+                      <div className={`w-full aspect-square rounded-3xl bg-white shadow-lg border border-gray-100 overflow-hidden flex items-center justify-center p-4`}>
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    </div>
+
                     <p className={`text-xl leading-relaxed max-w-sm transition-colors duration-500 ${activeFeature === index ? 'text-gray-600' : 'text-gray-300'}`}>
                       {feature.desc}
                     </p>
