@@ -216,7 +216,7 @@ function Home() {
             {/* New Animated Gradient Title */}
             <div className="mb-4">
               <GradientText
-                colors={['#002395', '#FF4757', '#002395', '#FF4757', '#002395']}
+                colors={['#FF4757', '#9333ea', '#db2777', '#FF4757']}
                 animationSpeed={6}
                 showBorder={false}
                 className="text-6xl md:text-8xl font-black tracking-tighter"
