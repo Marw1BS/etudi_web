@@ -222,7 +222,7 @@ function Home() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Fini les recherches interminables. Avec <span className="font-bold text-gray-900">ETUDI</span>, l'**App** de référence, trouvez un enseignant certifié pour exceller dans vos **études**.
+              Fini les recherches interminables. Avec <span className="font-bold text-gray-900">ETUDI</span>, l'<span className="font-bold text-gray-900">App</span> de référence, trouvez un enseignant certifié pour exceller dans vos <span className="font-bold text-gray-900">études</span>.
             </p>
 
             {/* CTA Buttons */}
