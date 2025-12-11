@@ -17,6 +17,7 @@ import {
   Send
 } from 'lucide-react'
 import { Button, Badge, Card, Avatar, PhoneMockup } from '../../components/ui'
+import GradientText from '../../components/ui/GradientText';
 
 // Images
 const IMAGES = {
@@ -211,6 +212,19 @@ function Home() {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+
+            {/* New Animated Gradient Title */}
+            <div className="mb-4">
+              <GradientText
+                colors={['#002395', '#FF4757', '#002395', '#FF4757', '#002395']}
+                animationSpeed={6}
+                showBorder={false}
+                className="text-6xl md:text-8xl font-black tracking-tighter"
+              >
+                ETUDI
+              </GradientText>
+            </div>
+
             <div className="inline-flex justify-center">
               <Badge variant="tricolor" className="px-6 py-2 text-sm font-semibold shadow-sm">
                 🎓 La 1ère app de soutien scolaire en Tunisie
