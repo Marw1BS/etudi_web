@@ -52,7 +52,18 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <!-- Static SEO Content (Visible to bots before React loads) -->
+        <div style="opacity: 0; position: absolute; pointer-events: none; z-index: -1;">
+            <h1>ETUDI - Trouver un Prof particulier en Tunisie</h1>
+            <h2>L'application N°1 pour réussir vos études</h2>
+            <p>
+                Téléchargez ETUDI, l'app de référence en Tunisie pour le soutien scolaire.
+                Trouvez facilement un enseignant certifié, suivez vos cours et améliorez vos notes.
+                Disponible sur iOS et Android.
+            </p>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
