@@ -218,23 +218,17 @@ function Home() {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-gray-900 tracking-tight">
-              Trouver un prof particulier <br /> n'a jamais été aussi{' '}
-              <span className="text-primary relative inline-block">
-                simple
-                <svg className="absolute w-full h-4 -bottom-2 left-0 text-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-                </svg>
-              </span>
+              Trouver un <span className="text-primary">Prof</span> particulier <br /> en Tunisie n'a jamais été aussi simple.
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Fini les heures perdues à chercher. Avec <span className="font-bold text-gray-900">ETUDI</span>, trouve le professeur idéal certifié pour tes études en quelques clics.
+              Fini les recherches interminables. Avec <span className="font-bold text-gray-900">ETUDI</span>, l'**App** de référence, trouvez un enseignant certifié pour exceller dans vos **études**.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <Button size="lg" className="rounded-full px-10 py-7 text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-primary-dark border-0">
-                <Smartphone size={24} className="mr-3" /> Télécharger l'app
+                <Smartphone size={24} className="mr-3" /> Télécharger l'App
               </Button>
               <Button size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/80 hover:bg-white border-2 border-gray-100 text-gray-700">
                 Voir comment ça marche
@@ -259,7 +253,7 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Trouver un bon prof, <br /> c'est souvent <span className="text-red-500">compliqué</span>
+              Trouver un bon <span className="text-primary">prof en Tunisie</span>, <br /> c'est souvent <span className="text-red-500">compliqué</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">
               Entre les groupes Facebook, le bouche-à-oreille et les numéros qui ne répondent pas...
@@ -291,7 +285,7 @@ function Home() {
               La solution
             </Badge>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              ETUDI simplifie tout
+              ETUDI simplifie vos <span className="text-primary">études</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">
               Une application pensée pour les étudiants tunisiens. Simple, rapide et fiable.
@@ -336,7 +330,7 @@ function Home() {
               <div className="mb-32 pl-4">
                 <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Explorer l'application</Badge>
                 <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  Une suite d'outils <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">sur mesure.</span>
+                  L'application pour réussir vos <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">études en Tunisie.</span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-md">
                   Naviguez à travers les fonctionnalités essentielles conçues pour booster votre réussite scolaire.
