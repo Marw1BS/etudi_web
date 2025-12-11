@@ -582,6 +582,51 @@ function Home() {
         </div>
       </section>
 
+      {/* FAQ Section - SEO Content Expansion */}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Questions <span className="text-primary">fréquentes</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+              Tout ce que vous devez savoir sur l'application N°1 d'études en Tunisie.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            {[
+              {
+                q: "Comment trouver un prof particulier en Tunisie avec ETUDI ?",
+                a: "C'est très simple. Téléchargez l'application, créez votre compte élève et lancez une recherche par matière (Maths, Physique, etc.) et par ville. Vous verrez une liste de profs vérifiés avec leurs avis et tarifs."
+              },
+              {
+                q: "Les professeurs sont-ils vraiment vérifiés ?",
+                a: "Oui, absolument. La sécurité et la qualité sont nos priorités. Chaque enseignant sur ETUDI doit fournir ses diplômes et une pièce d'identité. Notre équipe valide manuellement chaque profil avant qu'il ne soit visible."
+              },
+              {
+                q: "L'application est-elle gratuite ?",
+                a: "Le téléchargement de l'app est 100% gratuit sur l'App Store et Google Play. La mise en relation est également gratuite. Vous ne payez que les cours que vous réservez directement avec le prof."
+              },
+              {
+                q: "Puis-je préparer mon Bac avec ETUDI ?",
+                a: "Tout à fait ! Nous avons des centaines de profs spécialisés dans la préparation aux examens nationaux (Bac, Neuvième, Concours). Vous pouvez même filtrer pour trouver des experts du Bac Tunisien."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-lg transition-all border border-gray-100">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-start">
+                  <span className="text-primary mr-3 text-2xl">•</span>
+                  {faq.q}
+                </h3>
+                <p className="text-gray-600 leading-relaxed pl-6">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer - Minimalist */}
       <footer className="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800">
         <div className="container mx-auto px-6">
