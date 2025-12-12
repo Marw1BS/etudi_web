@@ -172,7 +172,15 @@ function Home() {
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 group">
               <div className="relative p-1 bg-white rounded-xl shadow-sm group-hover:shadow-md transition-all">
-                <img src={IMAGES.LOGO} alt="ETUDI Logo" className="h-10 w-10 object-contain" />
+                <img
+                  src={`${IMAGES.LOGO}?v=2`}
+                  alt="ETUDI Logo"
+                  className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/images/logo_etudi.webp';
+                  }}
+                />
               </div>
               <span className="text-2xl font-bold text-gray-900 tracking-tight group-hover:text-primary transition-colors">
                 ETUDI
