@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Search,
   CheckCircle,
@@ -252,9 +253,11 @@ function Home() {
               <Button size="lg" className="rounded-full px-10 py-7 text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-primary-dark border-0">
                 <Smartphone size={24} className="mr-3" /> Télécharger l'App
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/80 hover:bg-white border-2 border-gray-100 text-gray-700">
-                Voir comment ça marche
-              </Button>
+              <Link to="/je-suis-prof">
+                <Button size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/80 hover:bg-white border-2 border-gray-100 text-gray-700 w-full sm:w-auto">
+                  Je suis Prof
+                </Button>
+              </Link>
             </div>
 
             {/* Key Benefits */}
@@ -371,14 +374,31 @@ function Home() {
                       {feature.title}
                     </h3>
 
-                    {/* Mobile Image (Inline) - Visible only on small screens */}
-                    <div className="md:hidden mb-6 w-full relative">
-                      <div className={`w-full aspect-square rounded-3xl bg-white shadow-lg border border-gray-100 overflow-hidden flex items-center justify-center p-4`}>
-                        <img
-                          src={feature.image}
-                          alt={feature.title}
-                          className="w-full h-full object-contain"
-                        />
+                    {/* Mobile Image (Inline) - Phone Mockup Style */}
+                    <div className="md:hidden mb-6 flex justify-center relative">
+                      {/* Mobile Glow Background */}
+                      <div className={`absolute inset-0 bg-gradient-to-br from-${feature.color}-400/20 to-purple-400/10 rounded-[3rem] blur-2xl -z-10`} />
+                      
+                      {/* Phone Frame */}
+                      <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[2.5rem] p-1.5 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3)]">
+                        {/* Dynamic Island */}
+                        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-30" />
+                        
+                        {/* Screen */}
+                        <div className="relative bg-gray-50 rounded-[2rem] overflow-hidden w-[200px] h-[400px] flex items-center justify-center">
+                          <img
+                            src={feature.image}
+                            alt={feature.title}
+                            className="w-full h-full object-contain"
+                          />
+                          {/* Screen Glare */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
+                        </div>
+                        
+                        {/* Side Buttons */}
+                        <div className="absolute left-[-2px] top-[25%] w-[3px] h-6 bg-gray-700 rounded-l-sm" />
+                        <div className="absolute left-[-2px] top-[35%] w-[3px] h-10 bg-gray-700 rounded-l-sm" />
+                        <div className="absolute right-[-2px] top-[30%] w-[3px] h-12 bg-gray-700 rounded-r-sm" />
                       </div>
                     </div>
 
@@ -396,26 +416,93 @@ function Home() {
               <div className="h-[20vh]" />
             </div>
 
-            {/* Right: Sticky Image Display - Balanced Size (Not too big, uncropped) */}
-            <div className="hidden md:flex w-1/2 sticky top-32 h-[calc(100vh-8rem)] items-center justify-center p-8">
-              <div className="relative w-full max-w-lg aspect-[3/4] flex items-center justify-center">
-                {/* Dynamic Glow Background - Localized */}
-                <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-[80px] bg-${APP_FEATURES_LIST[activeFeature]?.color}-500/15 transition-colors duration-1000`} />
+            {/* Right: Sticky Phone Mockup Display - Premium Look */}
+            <div className="hidden md:flex w-1/2 sticky top-20 h-[calc(100vh-5rem)] items-center justify-center p-4">
+              <div className="relative flex items-center justify-center">
+                
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 -z-10">
+                  {/* Primary Glow */}
+                  <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-[100px] bg-gradient-to-br from-${APP_FEATURES_LIST[activeFeature]?.color}-400/30 to-purple-400/20 transition-all duration-1000 animate-pulse`} />
+                  {/* Secondary Glow */}
+                  <div className={`absolute left-[30%] top-[60%] w-[200px] h-[200px] rounded-full blur-[80px] bg-${APP_FEATURES_LIST[activeFeature]?.color}-300/20 transition-all duration-700`} />
+                  {/* Floating Orbs */}
+                  <div className="absolute top-10 right-10 w-16 h-16 bg-gradient-to-br from-primary/30 to-purple-500/20 rounded-full blur-xl animate-bounce" style={{ animationDuration: '3s' }} />
+                  <div className="absolute bottom-20 left-10 w-12 h-12 bg-gradient-to-br from-blue-400/30 to-cyan-500/20 rounded-full blur-lg animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }} />
+                </div>
 
-                {/* Clean Modern Card - Balanced Size */}
-                <div className="relative w-full h-full bg-white rounded-[40px] shadow-2xl shadow-black/10 overflow-hidden ring-1 ring-black/5 transform transition-all duration-700">
-                  {APP_FEATURES_LIST.map((feature, index) => (
+                {/* Phone Frame Container */}
+                <div className="relative">
+                  {/* Reflection Effect */}
+                  <div className="absolute -inset-4 bg-gradient-to-b from-white/20 to-transparent rounded-[3rem] blur-2xl -z-10" />
+                  
+                  {/* Phone Mockup */}
+                  <div className="relative">
+                    {/* Phone Frame */}
+                    <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4),0_30px_60px_-30px_rgba(0,0,0,0.5)] ring-1 ring-white/10">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-30 flex items-center justify-center">
+                        <div className="w-3 h-3 rounded-full bg-gray-800 mr-8" />
+                      </div>
+                      
+                      {/* Screen Container - Responsive size */}
+                      <div className="relative bg-white rounded-[2.5rem] overflow-hidden w-[300px] h-[620px]">
+                        {/* Status Bar */}
+                        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black/5 to-transparent z-20 flex items-center justify-between px-8 pt-2 text-[10px] font-medium text-gray-600">
+                          <span>9:41</span>
+                          <div className="flex items-center gap-1">
+                            <span>📶</span>
+                            <span>🔋</span>
+                          </div>
+                        </div>
+                        
+                        {/* Screen Content with Transitions */}
+                        {APP_FEATURES_LIST.map((feature, index) => (
+                          <div
+                            key={index}
+                            className={`absolute inset-0 w-full h-full flex items-center justify-center bg-gray-50 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                              activeFeature === index 
+                                ? 'opacity-100 scale-100 translate-y-0' 
+                                : activeFeature > index 
+                                  ? 'opacity-0 scale-95 -translate-y-8' 
+                                  : 'opacity-0 scale-95 translate-y-8'
+                            }`}
+                          >
+                            <img
+                              src={feature.image}
+                              alt={feature.title}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ))}
+                        
+                        {/* Screen Glare Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none z-10" />
+                      </div>
+
+                      {/* Side Buttons */}
+                      <div className="absolute left-[-3px] top-[20%] w-[4px] h-8 bg-gray-700 rounded-l-sm" />
+                      <div className="absolute left-[-3px] top-[30%] w-[4px] h-12 bg-gray-700 rounded-l-sm" />
+                      <div className="absolute left-[-3px] top-[42%] w-[4px] h-12 bg-gray-700 rounded-l-sm" />
+                      <div className="absolute right-[-3px] top-[28%] w-[4px] h-16 bg-gray-700 rounded-r-sm" />
+                    </div>
+                    
+                    {/* Phone Shadow */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[60%] h-8 bg-black/20 blur-2xl rounded-full" />
+                  </div>
+                </div>
+
+                {/* Feature Indicator Dots */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {APP_FEATURES_LIST.map((_, index) => (
                     <div
                       key={index}
-                      className={`absolute inset-0 w-full h-full p-4 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] flex items-center justify-center ${activeFeature === index ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
-                    >
-                      {/* Image with object-contain to prevent cropping */}
-                      <img
-                        src={feature.image}
-                        alt={feature.title}
-                        className="w-full h-full object-contain rounded-[24px]"
-                      />
-                    </div>
+                      className={`w-2 h-2 rounded-full transition-all duration-500 ${
+                        activeFeature === index 
+                          ? 'bg-primary w-6 shadow-lg shadow-primary/30' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                    />
                   ))}
                 </div>
               </div>
@@ -613,7 +700,7 @@ function Home() {
               {
                 name: "Karim M.",
                 role: "Étudiant Prépa",
-                text: "L'application est top pour trouver des cours de soutien scolaire. Les profs sont vraiment vérifiés et compétents. J'utilise l'app pour mes cours de Maths et d'Informatique chaque semaine.",
+                text: "L'application haidhi 3awnitni, merci 5atir fikra behya. J'ai cherché longtemps un professeur compétant et j'ai trouvé le bon avec ETUDI.",
                 stars: 5
               },
               {
