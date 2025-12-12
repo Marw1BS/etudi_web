@@ -437,7 +437,7 @@ function Home() {
                       {feature.icon}
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                       <p className="text-gray-500">{feature.desc}</p>
                     </div>
                   </div>
@@ -456,7 +456,7 @@ function Home() {
                       <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-[3px] border-white rounded-full" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900">Sarah Ben Ali</h4>
+                      <h3 className="font-bold text-gray-900">Sarah Ben Ali</h3>
                       <p className="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full inline-block mt-0.5">En ligne</p>
                     </div>
                   </div>
@@ -520,7 +520,7 @@ function Home() {
                   <div key={i} className="flex items-start gap-4 bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/5 hover:bg-white/10 transition-colors">
                     <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center shrink-0">{feature.icon}</div>
                     <div className="text-left">
-                      <h4 className="font-bold text-white mb-1">{feature.title}</h4>
+                      <h3 className="font-bold text-white mb-1">{feature.title}</h3>
                       <p className="text-slate-400 text-sm">{feature.desc}</p>
                     </div>
                   </div>
@@ -578,6 +578,61 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section - SEO Content Boost */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Ce que les étudiants disent <br /> d'<span className="text-primary">ETUDI</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+              Rejoignez des milliers d'élèves qui ont amélioré leurs notes grâce à notre application.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Yasmine B.",
+                role: "Élève Bac Maths",
+                text: "J'avais du mal en Physique. Grâce à ETUDI, j'ai trouvé un prof particulier à Tunis en 5 minutes. Mes notes ont doublé en un trimestre ! L'app est super facile à utiliser pour réviser.",
+                stars: 5
+              },
+              {
+                name: "Karim M.",
+                role: "Étudiant Prépa",
+                text: "L'application est top pour trouver des cours de soutien scolaire. Les profs sont vraiment vérifiés et compétents. J'utilise l'app pour mes cours de Maths et d'Informatique chaque semaine.",
+                stars: 5
+              },
+              {
+                name: "Amira S.",
+                role: "Parent d'élève",
+                text: "Enfin une solution fiable en Tunisie ! J'ai trouvé un excellent enseignant pour ma fille en 9ème. Le suivi des notes et la messagerie intégrée sont des vrais plus. Je recommande à 100%.",
+                stars: 5
+              }
+            ].map((review, i) => (
+              <div key={i} className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex text-amber-500 mb-4">
+                  {[...Array(review.stars)].map((_, i) => (
+                    <Star key={i} size={20} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">"{review.text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-lg">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">{review.name}</div>
+                    <div className="text-sm text-gray-500">{review.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
