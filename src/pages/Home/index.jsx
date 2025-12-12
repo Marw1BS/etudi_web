@@ -232,7 +232,7 @@ function Home() {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-gray-900 tracking-tight">
-              Trouver un <span className="text-primary">Prof</span> particulier <br /> en Tunisie n'a jamais été aussi simple.
+              L'<span className="text-primary">App</span> N°1 pour tes <span className="text-secondary">Études</span> <br /> et trouver un Prof en Tunisie.
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
