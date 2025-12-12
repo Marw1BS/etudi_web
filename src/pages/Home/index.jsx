@@ -21,7 +21,7 @@ import GradientText from '../../components/ui/GradientText';
 
 // Images
 const IMAGES = {
-  LOGO: '/images/logo_etudi.webp',
+  LOGO: '/images/ETUDI_ICONE.png',
   STUDENTS_BANNER: '/images/students_banner.webp', // Can be used for Hero background or social proof
   PROFILE_SARAH: '/images/profile_sarah.webp',
   PROFILE_AHMED: '/images/profile_ahmed.webp',
