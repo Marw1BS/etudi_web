@@ -158,9 +158,11 @@ const TeacherHome = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" className="rounded-full px-10 py-7 text-lg bg-primary hover:bg-primary-dark shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all">
-                            <Download className="mr-2 h-6 w-6" /> Télécharger l'App
-                        </Button>
+                        <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" className="rounded-full px-10 py-7 text-lg bg-primary hover:bg-primary-dark shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all">
+                                <Download className="mr-2 h-6 w-6" /> Télécharger l'App
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -231,7 +233,7 @@ const TeacherHome = () => {
                         {/* Right: Sticky Phone Mockup */}
                         <div className="hidden md:flex w-1/2 sticky top-20 h-[calc(100vh-5rem)] items-center justify-center p-4">
                             <div className="relative flex items-center justify-center">
-                                
+
                                 {/* Animated Background */}
                                 <div className="absolute inset-0 -z-10">
                                     <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-[100px] bg-gradient-to-br from-${PROF_FEATURES_LIST[activeFeature]?.color}-400/30 to-cyan-400/20 transition-all duration-1000 animate-pulse`} />
@@ -243,13 +245,13 @@ const TeacherHome = () => {
                                 {/* Phone Frame */}
                                 <div className="relative">
                                     <div className="absolute -inset-4 bg-gradient-to-b from-white/20 to-transparent rounded-[3rem] blur-2xl -z-10" />
-                                    
+
                                     <div className="relative">
                                         <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4),0_30px_60px_-30px_rgba(0,0,0,0.5)] ring-1 ring-white/10">
                                             <div className="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-30 flex items-center justify-center">
                                                 <div className="w-3 h-3 rounded-full bg-gray-800 mr-8" />
                                             </div>
-                                            
+
                                             <div className="relative bg-white rounded-[2.5rem] overflow-hidden w-[300px] h-[620px]">
                                                 <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black/5 to-transparent z-20 flex items-center justify-between px-8 pt-2 text-[10px] font-medium text-gray-600">
                                                     <span>9:41</span>
@@ -258,22 +260,21 @@ const TeacherHome = () => {
                                                         <span>🔋</span>
                                                     </div>
                                                 </div>
-                                                
+
                                                 {PROF_FEATURES_LIST.map((feature, index) => (
                                                     <div
                                                         key={index}
-                                                        className={`absolute inset-0 w-full h-full flex items-center justify-center bg-gray-50 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                                                            activeFeature === index 
-                                                                ? 'opacity-100 scale-100 translate-y-0' 
-                                                                : activeFeature > index 
-                                                                    ? 'opacity-0 scale-95 -translate-y-8' 
+                                                        className={`absolute inset-0 w-full h-full flex items-center justify-center bg-gray-50 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${activeFeature === index
+                                                                ? 'opacity-100 scale-100 translate-y-0'
+                                                                : activeFeature > index
+                                                                    ? 'opacity-0 scale-95 -translate-y-8'
                                                                     : 'opacity-0 scale-95 translate-y-8'
-                                                        }`}
+                                                            }`}
                                                     >
                                                         <img src={feature.image} alt={feature.title} className="w-full h-full object-contain" />
                                                     </div>
                                                 ))}
-                                                
+
                                                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none z-10" />
                                             </div>
 
@@ -282,7 +283,7 @@ const TeacherHome = () => {
                                             <div className="absolute left-[-3px] top-[42%] w-[4px] h-12 bg-gray-700 rounded-l-sm" />
                                             <div className="absolute right-[-3px] top-[28%] w-[4px] h-16 bg-gray-700 rounded-r-sm" />
                                         </div>
-                                        
+
                                         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[60%] h-8 bg-black/20 blur-2xl rounded-full" />
                                     </div>
                                 </div>
@@ -292,11 +293,10 @@ const TeacherHome = () => {
                                     {PROF_FEATURES_LIST.map((_, index) => (
                                         <div
                                             key={index}
-                                            className={`w-2 h-2 rounded-full transition-all duration-500 ${
-                                                activeFeature === index 
-                                                    ? 'bg-blue-600 w-6 shadow-lg shadow-blue-600/30' 
+                                            className={`w-2 h-2 rounded-full transition-all duration-500 ${activeFeature === index
+                                                    ? 'bg-blue-600 w-6 shadow-lg shadow-blue-600/30'
                                                     : 'bg-gray-300 hover:bg-gray-400'
-                                            }`}
+                                                }`}
                                         />
                                     ))}
                                 </div>
@@ -493,9 +493,11 @@ const TeacherHome = () => {
                             <Button size="lg" className="rounded-full px-10 py-6 text-lg bg-primary hover:bg-primary-dark">
                                 Devenir Professeur
                             </Button>
-                            <Button size="lg" variant="outline" className="rounded-full px-10 py-6 text-lg bg-white border-2 border-gray-200 hover:border-gray-300">
-                                <Download size={20} className="mr-2" /> Télécharger l'App
-                            </Button>
+                            <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" variant="outline" className="rounded-full px-10 py-6 text-lg bg-white border-2 border-gray-200 hover:border-gray-300">
+                                    <Download size={20} className="mr-2" /> Télécharger l'App
+                                </Button>
+                            </a>
                         </div>
 
                         {/* SEO Text */}

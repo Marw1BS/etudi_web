@@ -203,9 +203,11 @@ function Home() {
 
             {/* CTA Button */}
             <div className="flex items-center gap-3">
-              <Button size="sm" className="rounded-full px-6 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 bg-gradient-to-r from-primary to-primary-dark">
-                <Download size={18} className="mr-2" /> Télécharger
-              </Button>
+              <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="rounded-full px-6 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 bg-gradient-to-r from-primary to-primary-dark">
+                  <Download size={18} className="mr-2" /> Télécharger
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -250,9 +252,11 @@ function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="rounded-full px-10 py-7 text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-primary-dark border-0">
-                <Smartphone size={24} className="mr-3" /> Télécharger l'App
-              </Button>
+              <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="rounded-full px-10 py-7 text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-primary-dark border-0">
+                  <Smartphone size={24} className="mr-3" /> Télécharger l'App
+                </Button>
+              </a>
               <Link to="/je-suis-prof">
                 <Button size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/80 hover:bg-white border-2 border-gray-100 text-gray-700 w-full sm:w-auto">
                   Je suis Prof
@@ -378,12 +382,12 @@ function Home() {
                     <div className="md:hidden mb-6 flex justify-center relative">
                       {/* Mobile Glow Background */}
                       <div className={`absolute inset-0 bg-gradient-to-br from-${feature.color}-400/20 to-purple-400/10 rounded-[3rem] blur-2xl -z-10`} />
-                      
+
                       {/* Phone Frame */}
                       <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[2.5rem] p-1.5 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.3)]">
                         {/* Dynamic Island */}
                         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-30" />
-                        
+
                         {/* Screen */}
                         <div className="relative bg-gray-50 rounded-[2rem] overflow-hidden w-[200px] h-[400px] flex items-center justify-center">
                           <img
@@ -394,7 +398,7 @@ function Home() {
                           {/* Screen Glare */}
                           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
                         </div>
-                        
+
                         {/* Side Buttons */}
                         <div className="absolute left-[-2px] top-[25%] w-[3px] h-6 bg-gray-700 rounded-l-sm" />
                         <div className="absolute left-[-2px] top-[35%] w-[3px] h-10 bg-gray-700 rounded-l-sm" />
@@ -419,7 +423,7 @@ function Home() {
             {/* Right: Sticky Phone Mockup Display - Premium Look */}
             <div className="hidden md:flex w-1/2 sticky top-20 h-[calc(100vh-5rem)] items-center justify-center p-4">
               <div className="relative flex items-center justify-center">
-                
+
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 -z-10">
                   {/* Primary Glow */}
@@ -435,7 +439,7 @@ function Home() {
                 <div className="relative">
                   {/* Reflection Effect */}
                   <div className="absolute -inset-4 bg-gradient-to-b from-white/20 to-transparent rounded-[3rem] blur-2xl -z-10" />
-                  
+
                   {/* Phone Mockup */}
                   <div className="relative">
                     {/* Phone Frame */}
@@ -444,7 +448,7 @@ function Home() {
                       <div className="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-30 flex items-center justify-center">
                         <div className="w-3 h-3 rounded-full bg-gray-800 mr-8" />
                       </div>
-                      
+
                       {/* Screen Container - Responsive size */}
                       <div className="relative bg-white rounded-[2.5rem] overflow-hidden w-[300px] h-[620px]">
                         {/* Status Bar */}
@@ -455,18 +459,17 @@ function Home() {
                             <span>🔋</span>
                           </div>
                         </div>
-                        
+
                         {/* Screen Content with Transitions */}
                         {APP_FEATURES_LIST.map((feature, index) => (
                           <div
                             key={index}
-                            className={`absolute inset-0 w-full h-full flex items-center justify-center bg-gray-50 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                              activeFeature === index 
-                                ? 'opacity-100 scale-100 translate-y-0' 
-                                : activeFeature > index 
-                                  ? 'opacity-0 scale-95 -translate-y-8' 
+                            className={`absolute inset-0 w-full h-full flex items-center justify-center bg-gray-50 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${activeFeature === index
+                                ? 'opacity-100 scale-100 translate-y-0'
+                                : activeFeature > index
+                                  ? 'opacity-0 scale-95 -translate-y-8'
                                   : 'opacity-0 scale-95 translate-y-8'
-                            }`}
+                              }`}
                           >
                             <img
                               src={feature.image}
@@ -475,7 +478,7 @@ function Home() {
                             />
                           </div>
                         ))}
-                        
+
                         {/* Screen Glare Effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none z-10" />
                       </div>
@@ -486,7 +489,7 @@ function Home() {
                       <div className="absolute left-[-3px] top-[42%] w-[4px] h-12 bg-gray-700 rounded-l-sm" />
                       <div className="absolute right-[-3px] top-[28%] w-[4px] h-16 bg-gray-700 rounded-r-sm" />
                     </div>
-                    
+
                     {/* Phone Shadow */}
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[60%] h-8 bg-black/20 blur-2xl rounded-full" />
                   </div>
@@ -497,11 +500,10 @@ function Home() {
                   {APP_FEATURES_LIST.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-2 h-2 rounded-full transition-all duration-500 ${
-                        activeFeature === index 
-                          ? 'bg-primary w-6 shadow-lg shadow-primary/30' 
+                      className={`w-2 h-2 rounded-full transition-all duration-500 ${activeFeature === index
+                          ? 'bg-primary w-6 shadow-lg shadow-primary/30'
                           : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -632,13 +634,13 @@ function Home() {
                   </div>
                 </button>
 
-                <button className="bg-transparent text-white border-2 border-white/20 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white/20 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-3">
                   <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" /></svg>
                   <div className="text-left leading-none">
                     <div className="text-xs font-medium mb-1 opacity-70">Disponible sur</div>
                     <div className="text-xl">Google Play</div>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
 
