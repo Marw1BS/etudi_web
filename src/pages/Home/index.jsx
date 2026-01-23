@@ -243,11 +243,11 @@ function Home() {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-gray-900 tracking-tight">
-              L'<span className="text-primary">App</span> N°1 pour tes <span className="text-secondary">Études</span> <br /> et trouver un Prof en Tunisie.
+              Trouver un <span className="text-primary">Prof Particulier</span> <br /> pour vos <span className="text-secondary">Études en Tunisie</span>
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Fini les recherches interminables. Avec <span className="font-bold text-gray-900">ETUDI</span>, l'<span className="font-bold text-gray-900">App</span> de référence, trouvez un enseignant certifié pour exceller dans vos <span className="font-bold text-gray-900">études</span>.
+              Fini les recherches interminables. Avec <span className="font-bold text-gray-900">ETUDI</span>, trouvez rapidement un <span className="font-bold text-gray-900">professeur particulier</span> certifié près de chez vous. Soutien scolaire, cours à domicile et préparation aux examens en Tunisie.
             </p>
 
             {/* CTA Buttons */}
@@ -775,6 +775,88 @@ function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content Section - Rich Text for Organic Search */}
+      <section className="py-24 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                ETUDI : La solution <br /> pour trouver un professeur <br /> particulier en Tunisie
+              </h2>
+              <p className="text-xl text-slate-300 max-w-xl mx-auto leading-relaxed">
+                La plateforme de référence pour le soutien scolaire et les cours particuliers en Tunisie
+              </p>
+            </div>
+
+            <div className="prose prose-lg mx-auto">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 mb-6 hover:bg-white/10 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Comment trouver un prof particulier en Tunisie rapidement ?
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
+                  Vous cherchez un <strong className="text-white">professeur particulier en Tunisie</strong> pour vous accompagner dans vos études ? ETUDI est la plateforme qui simplifie votre recherche. Que vous soyez à <strong className="text-white">Tunis</strong>, <strong className="text-white">Sfax</strong>, <strong className="text-white">Sousse</strong> ou toute autre ville tunisienne, trouvez en quelques clics un <strong className="text-white">enseignant qualifié</strong> près de chez vous.
+                </p>
+                <p className="text-slate-300 leading-relaxed">
+                  Grâce à notre système de filtres avancés, recherchez par <strong className="text-white">matière</strong> (mathématiques, physique, français, anglais, etc.), par <strong className="text-white">niveau scolaire</strong> (primaire, collège, lycée, bac, universitaire) et par <strong className="text-white">localisation</strong>. Consultez les profils détaillés, les avis d'autres élèves, et contactez directement le prof qui correspond à vos besoins.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 mb-6 hover:bg-white/10 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Soutien scolaire et cours à domicile pour tous les niveaux
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
+                  ETUDI propose une solution complète de <strong className="text-white">soutien scolaire en Tunisie</strong>. Que vous prépariez le <strong className="text-white">Bac tunisien</strong>, un concours d'entrée, ou que vous souhaitiez simplement améliorer vos résultats, nos <strong className="text-white">professeurs certifiés</strong> sont là pour vous aider.
+                </p>
+                <p className="text-slate-300 leading-relaxed">
+                  Organisez des <strong className="text-white">cours particuliers à domicile</strong> ou en ligne selon vos préférences. Chaque enseignant est vérifié par notre équipe pour garantir la qualité de l'enseignement. Réservez vos séances directement via l'application et suivez votre progression grâce à nos outils de gestion de notes et d'emploi du temps.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Pourquoi choisir ETUDI pour vos études en Tunisie ?
+                </h3>
+                <ul className="space-y-3 text-slate-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle size={24} className="text-green-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Professeurs vérifiés :</strong> Tous nos enseignants sont certifiés et leurs diplômes sont validés par notre équipe</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle size={24} className="text-green-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Recherche simplifiée :</strong> Trouvez le prof idéal en quelques secondes grâce à nos filtres intelligents</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle size={24} className="text-green-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Communication directe :</strong> Discutez avec votre futur prof avant de réserver via notre messagerie intégrée</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle size={24} className="text-green-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Avis authentiques :</strong> Consultez les retours d'autres élèves pour faire le bon choix</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle size={24} className="text-green-400 shrink-0 mt-0.5" />
+                    <span><strong className="text-white">Couverture nationale :</strong> Des milliers de professeurs dans toute la Tunisie</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center pt-8">
+              <a href="https://play.google.com/store/apps/details?id=com.etudi.app&hl=fr" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="rounded-full px-10 py-6 text-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 bg-gradient-to-r from-primary to-primary-dark border-0">
+                  <Download size={24} className="mr-3" /> Commencer maintenant - C'est gratuit
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

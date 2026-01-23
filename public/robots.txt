@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://etudi.netlify.app/sitemap.xml
+# Sitemap
+Sitemap: https://etudi.tn/sitemap.xml
