@@ -8,9 +8,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#FF4757',
-          dark: '#ED2939',
+          DEFAULT: '#E63946',
+          dark: '#D62839',
         },
+        navy: '#1D3557',
+        muted: '#457B9D',
+        mint: '#F1FAEE',
         secondary: {
           DEFAULT: '#002395',
           light: '#3457D5',
@@ -22,7 +25,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         'card': '20px',
@@ -31,6 +34,8 @@ export default {
         'input': '16px',
       },
       boxShadow: {
+        'soft': '0 4px 20px rgba(0, 0, 0, 0.06)',
+        'cta': '0 4px 14px rgba(230, 57, 70, 0.3)',
         'card': '0 8px 24px rgba(0, 35, 149, 0.15)',
         'button': '0 4px 12px rgba(255, 71, 87, 0.4)',
       },
